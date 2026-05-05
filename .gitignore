@@ -1,24 +1,41 @@
-# .gitignore
+# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
-*.log
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
 venv/
-.env/
-.streamlit/
-.cache/
-**/node_modules/
-**/*.safetensors
-**/*.bin
-**/*.pt
-key.txt.txt
 .env
-.streamlit/
-venv/
-__pycache__/
-*.py[cod]
+.env.*
+!.env.example
+
+# Streamlit secrets and local state
+.streamlit/secrets.toml
+.cache/
+
+# Logs and generated outputs
 *.log
+outputs/
+exports/
+*.csv
+
+# Model weights and local caches
 *.safetensors
 *.bin
 *.pt
-key.txt.txt
+*.pth
+models/
+
+# Local artifacts and secrets
+*.zip
+backend/key.txt
+key.txt
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
