@@ -4,6 +4,8 @@ Candidate Matcher is an ATS-style Streamlit application that ranks candidate res
 
 The project combines resume parsing, sentence-transformer embeddings, cosine similarity ranking, and LLM-based summarization into a practical workflow for screening multiple candidates from a single interface.
 
+![Candidate Matcher workflow](media/candidate-matcher-workflow.svg)
+
 ## Features
 
 - Upload multiple resumes in PDF, DOCX, or TXT format.
