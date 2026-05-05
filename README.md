@@ -27,24 +27,25 @@ The project combines resume parsing, sentence-transformer embeddings, cosine sim
 
 ```text
 candidate-matcher/
-├── app.py                    # Streamlit app entry point and router
-├── backend/
-│   └── main.py               # Create Match UI and optional FastAPI service
-├── components/
-│   └── sidebar.py            # Horizontal navigation component
-├── modules/
-│   ├── embedder.py           # Sentence Transformer embedding loader
-│   ├── matcher.py            # Resume ranking pipeline
-│   ├── resume_parser.py      # PDF, DOCX, TXT parsing utilities
-│   ├── summarizer.py         # Gemma / Flan-T5 summary generation
-│   └── utils.py              # Cosine similarity and table helpers
-├── views/
-│   ├── dashboard.py          # Dashboard page
-│   ├── results.py            # Ranked results and CSV export
-│   └── settings.py           # User settings
-├── sample_resumes_pdf/       # Small sample resumes for testing
-├── requirements.txt
-└── README.md
+|-- app.py                    # Streamlit app entry point and router
+|-- backend/
+|   `-- main.py               # Create Match UI and optional FastAPI service
+|-- components/
+|   `-- sidebar.py            # Horizontal navigation component
+|-- modules/
+|   |-- embedder.py           # Sentence Transformer embedding loader
+|   |-- matcher.py            # Resume ranking pipeline
+|   |-- resume_parser.py      # PDF, DOCX, TXT parsing utilities
+|   |-- summarizer.py         # Gemma / Flan-T5 summary generation
+|   `-- utils.py              # Cosine similarity and table helpers
+|-- views/
+|   |-- dashboard.py          # Dashboard page
+|   |-- results.py            # Ranked results and CSV export
+|   `-- settings.py           # User settings
+|-- sample_resumes_pdf/       # Small sample resumes for testing
+|-- requirements.txt
+|-- secrets.example.toml      # Streamlit secrets template
+`-- README.md
 ```
 
 ## Tech Stack
@@ -74,7 +75,7 @@ pip install -r requirements.txt
 
 ## Configure Secrets
 
-The summarizer expects a Hugging Face token through Streamlit secrets. Create `.streamlit/secrets.toml` locally or configure the same key in Streamlit Cloud:
+The summarizer expects a Hugging Face token through Streamlit secrets. Use `secrets.example.toml` as a template and create `.streamlit/secrets.toml` locally, or configure the same key in Streamlit Cloud:
 
 ```toml
 HF_TOKEN = "your_hugging_face_token"
